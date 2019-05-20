@@ -16,7 +16,6 @@ namespace DatingApp.api.Controllers
 		public ValuesController(DataContext context)
 		{
 			_context = context;
-
 		}
 		// GET api/values
 		[HttpGet]
@@ -27,7 +26,7 @@ namespace DatingApp.api.Controllers
 		}
 
 		// GET api/values/5
-		[HttpGet("{id}")]
+		[HttpGet("{id}")] 
 		public async Task<IActionResult> GetValue(int id)
 		{
             var value = await _context.Values.FirstOrDefaultAsync(x => x.Id == id);
