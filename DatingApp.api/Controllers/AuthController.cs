@@ -17,13 +17,13 @@ namespace DatingApp.api.Controllers
   public class AuthController : ControllerBase
   {
     private readonly IAuthRepository _repo;
-		private readonly IConfiguration _config;
-
-		public AuthController(IAuthRepository repo, IConfiguration config)
+    private readonly IConfiguration _config;
+    
+    public AuthController(IAuthRepository repo, IConfiguration config)
     {
-      _repo = repo;
-			_config = config;
-		}
+       _repo = repo;
+       _config = config;
+    }
 
     [HttpPost("register")]
     public async Task<IActionResult> Register(UserForRegisterDto userForRegistorDto)
